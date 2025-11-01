@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tradeList = document.getElementById("trade-list");
 
-    fetch("trades.json")
+    fetch("data/trades.json")
         .then(response => response.json())
         .then(trades => {
             tradeList.innerHTML = ""; // Clear the loading message
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error fetching trades:", error);
         });
 });
+
 
 
 
